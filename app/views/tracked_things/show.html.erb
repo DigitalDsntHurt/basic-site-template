@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Time of thing:</strong>
+  <%= @tracked_thing.time_of_thing %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @tracked_thing.notes %>
+</p>
+
+<%= link_to 'Edit', edit_tracked_thing_path(@tracked_thing) %> |
+<%= link_to 'Back', tracked_things_path %>

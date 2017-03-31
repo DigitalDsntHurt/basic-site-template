@@ -1,0 +1,2 @@
+module TrackedThingsHelper
+end

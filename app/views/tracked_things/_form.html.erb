@@ -1,0 +1,27 @@
+<%= form_for(tracked_thing) do |f| %>
+  <% if tracked_thing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tracked_thing.errors.count, "error") %> prohibited this tracked_thing from being saved:</h2>
+
+      <ul>
+      <% tracked_thing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :time_of_thing %>
+    <%= f.text_field :time_of_thing, :value => Time.now %>
+  </div>
+
+  <div class="field">
+    <%= f.label :notes %>
+    <%= f.text_field :notes %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
